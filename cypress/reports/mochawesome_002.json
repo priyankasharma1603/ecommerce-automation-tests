@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-10-16T13:08:43.078Z",
+    "end": "2024-10-16T13:08:46.848Z",
+    "duration": 3770,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "01322f0d-81f8-4ac9-8ece-762fffd576dd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\loginTest.cy.js",
+      "file": "cypress\\e2e\\loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "90fdfe0a-5d1b-4d36-8cc2-553dbb522ddf",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should log in with valid credentials",
+              "fullTitle": "Login Test Should log in with valid credentials",
+              "timedOut": null,
+              "duration": 2258,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.inmotionhosting.com/login');\n// Enter valid credentials\ncy.get('#email').type('validuser@example.com');\ncy.get('#password').type('validpassword');\ncy.get('button[type=\"submit\"]').click();\n// Validate successful login by checking URL or dashboard element\ncy.url().should('include', '/dashboard');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.inmotionhosting.com/login\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nThis http request was redirected '1' time to:\n\n  - 302: https://www.inmotionhosting.com/wp-login.php\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.inmotionhosting.com/login\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nThis http request was redirected '1' time to:\n\n  - 302: https://www.inmotionhosting.com/wp-login.php\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:55117/__cypress/runner/cypress_runner.js:131634:76)\n    at visitFailedByErr (http://localhost:55117/__cypress/runner/cypress_runner.js:131049:12)\n    at <unknown> (http://localhost:55117/__cypress/runner/cypress_runner.js:131617:13)\n    at tryCatcher (http://localhost:55117/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55117/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:55117/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:55117/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:55117/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:55117/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:55117/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:55117/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:55117/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://my-cypress-tests/./cypress/e2e/loginTest.cy.js:3:7)",
+                "diff": null
+              },
+              "uuid": "18137f36-bf12-4b41-b07c-1cf5a7dcdd82",
+              "parentUUID": "90fdfe0a-5d1b-4d36-8cc2-553dbb522ddf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should show error message for invalid credentials",
+              "fullTitle": "Login Test Should show error message for invalid credentials",
+              "timedOut": null,
+              "duration": 1261,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.inmotionhosting.com/login');\n// Enter invalid credentials\ncy.get('#email').type('invaliduser@example.com');\ncy.get('#password').type('invalidpassword');\ncy.get('button[type=\"submit\"]').click();\n// Validate error message\ncy.contains('Invalid username or password').should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.inmotionhosting.com/login\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nThis http request was redirected '1' time to:\n\n  - 302: https://www.inmotionhosting.com/wp-login.php\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.inmotionhosting.com/login\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nThis http request was redirected '1' time to:\n\n  - 302: https://www.inmotionhosting.com/wp-login.php\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:55117/__cypress/runner/cypress_runner.js:131634:76)\n    at visitFailedByErr (http://localhost:55117/__cypress/runner/cypress_runner.js:131049:12)\n    at <unknown> (http://localhost:55117/__cypress/runner/cypress_runner.js:131617:13)\n    at tryCatcher (http://localhost:55117/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55117/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:55117/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:55117/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:55117/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:55117/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:55117/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:55117/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:55117/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://my-cypress-tests/./cypress/e2e/loginTest.cy.js:15:7)",
+                "diff": null
+              },
+              "uuid": "95dda577-a78b-4173-b688-cf417ea0a412",
+              "parentUUID": "90fdfe0a-5d1b-4d36-8cc2-553dbb522ddf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "18137f36-bf12-4b41-b07c-1cf5a7dcdd82",
+            "95dda577-a78b-4173-b688-cf417ea0a412"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3519,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

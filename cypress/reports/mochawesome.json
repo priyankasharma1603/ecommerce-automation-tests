@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-10-16T13:07:22.316Z",
+    "end": "2024-10-16T13:07:41.347Z",
+    "duration": 19031,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02f4e44a-ecf7-4cf6-8fb9-b3c1c4c03562",
+      "title": "",
+      "fullFile": "cypress\\e2e\\formValidationTest.cy.js",
+      "file": "cypress\\e2e\\formValidationTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4dd03513-5adf-4791-8295-9a7df236de9d",
+          "title": "Form Validation Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should validate required fields and correct form submission",
+              "fullTitle": "Form Validation Test Should validate required fields and correct form submission",
+              "timedOut": null,
+              "duration": 12744,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.inmotionhosting.com/contact');\n// Try submitting the form with empty required fields\ncy.get('button[type=\"submit\"]').click();\n// Check for error message for required fields\ncy.contains('This field is required').should('be.visible');\n// Fill out the form with valid data\ncy.get('#name').type('John Doe');\ncy.get('#email').type('john@example.com');\ncy.get('#message').type('I need help with a service.');\n// Submit the form\ncy.get('button[type=\"submit\"]').click();\n// Verify successful form submission\ncy.contains('Thank you for contacting us').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `button[type=\"submit\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `button[type=\"submit\"]`, but never found it.\n    at Context.eval (webpack://my-cypress-tests/./cypress/e2e/formValidationTest.cy.js:6:7)",
+                "diff": null
+              },
+              "uuid": "c76f7f42-ab22-4444-ad06-7393d942d09e",
+              "parentUUID": "4dd03513-5adf-4791-8295-9a7df236de9d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c76f7f42-ab22-4444-ad06-7393d942d09e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12744,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
